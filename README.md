@@ -36,17 +36,18 @@ Compilation
 ---------
 * Linux: if nvcc command is available, compile with makefile 
 * Windows: compile the source file manually with -arch=compute_30 and -code=sm_30
+* Source Files: language_network_main.cu language_network_utility.cu language_network_kernel.cu includes/optParser/getopt_pp.cpp
 
 
 Input Format
 ---------
 * corpus should be preprocessed into a text file with each line a document.
-* Words in document should be convert into ints by any bijective mapping M [1-V] <-> vocabulary (store separtely as a convertable)
+* words in document should be convert into ints by any bijective mapping M [1-V] <-> vocabulary (store separtely as a convertable)
 * Store word binary tree in two files: tree_point and tree_code. 
 * line N of tree_point should be a path through internal nodes from root to leaf word-N.
 * line N of tree_code should be a binary sequence cooresponding to the navigation of the above path (from root to leaf-N)
 * each word id n must have a code line and a point line in the tree files
-* A java implementation of huffman tree file constructor is provided, use if new tree construction is not needed
+* a java implementation of huffman tree file constructor is provided, use if new tree construction is not needed
 
 
 Usage
@@ -66,6 +67,15 @@ command line options:
 * --binaryWindow cache path for random windows data (delete manually after training)
 * --vocabSize vocabulary size
 * --treeSize size of inernal nodes of the binary tree
+
+
+Typedefs and Numerical Issues
+---------
+
+all types are found in src/includes/language_network_typedefs.h, modify if needed
+
+
+
 
 Benchmarks and Profiling
 ---------
