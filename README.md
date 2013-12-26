@@ -40,13 +40,13 @@ Compilation
 
 Input Format
 ---------
-*corpus should be preprocessed into a text file with each line a document.
-*Words in document should be convert into ints by any bijective mapping M [1-V] <-> vocabulary (store separtely as a convertable)
-*Store word binary tree in two files: tree_point and tree_code. 
-*line N of tree_point should be a path through internal nodes from root to leaf word-N.
-*line N of tree_code should be a binary sequence cooresponding to the navigation of the above path (from root to leaf-N)
-*each word id n must have a code line and a point line in the tree files
-*A java implementation of huffman tree file constructor is provided, use if new tree construction is not needed
+* corpus should be preprocessed into a text file with each line a document.
+* Words in document should be convert into ints by any bijective mapping M [1-V] <-> vocabulary (store separtely as a convertable)
+* Store word binary tree in two files: tree_point and tree_code. 
+* line N of tree_point should be a path through internal nodes from root to leaf word-N.
+* line N of tree_code should be a binary sequence cooresponding to the navigation of the above path (from root to leaf-N)
+* each word id n must have a code line and a point line in the tree files
+* A java implementation of huffman tree file constructor is provided, use if new tree construction is not needed
 
 
 Usage
