@@ -8,4 +8,3 @@ Features
 
 * parallel speedup with Nvidia GPU
 
-
